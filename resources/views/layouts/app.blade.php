@@ -23,29 +23,29 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                       function hideURLbar() { window.scrollTo(0, 1); }
     </script>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet" type="text/css" />
     <!-- font-awesome icons CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="{{ asset('backend/css/font-awesome.css') }}" rel="stylesheet" />
     <!-- //font-awesome icons CSS-->
     <!-- side nav css file -->
-    <link href="css/SidebarNav.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/css/SidebarNav.min.css') }}" media="all" rel="stylesheet" type="text/css" />
     <!-- //side nav css file -->
     <!-- js-->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <script src="{{ asset('backend/js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('backend/js/modernizr.custom.js') }}"></script>
     <!--webfonts-->
     <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
         rel="stylesheet" />
     <!--//webfonts-->
     <!-- chart -->
-    <script src="js/Chart.js"></script>
+    <script src="{{ asset('backend/js/Chart.js') }}"></script>
     <!-- //chart -->
     <!-- Metis Menu -->
-    <script src="js/metisMenu.min.js"></script>
-    <script src="js/custom.js"></script>
-    <link href="css/custom.css" rel="stylesheet" />
+    <script src="{{ asset('backend/js/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('backend/js/custom.js') }}"></script>
+    <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet" />
     <!--//Metis Menu -->
     <style>
         #chartdiv {
@@ -55,7 +55,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     </style>
     <!--pie-chart -->
     <!-- index page sales reviews visitors pie chart -->
-    <script src="js/pie-chart.js" type="text/javascript"></script>
+    <script src="{{ asset('backend/js/pie-chart.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#demo-pie-1').pieChart({
@@ -98,8 +98,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- //pie-chart -->
     <!-- index page sales reviews visitors pie chart -->
     <!-- requried-jsfiles-for owl -->
-    <link href="css/owl.carousel.css" rel="stylesheet" />
-    <script src="js/owl.carousel.js"></script>
+    <link href="{{ asset('backend/css/owl.carousel.css') }}" rel="stylesheet" />
+    <script src="{{ asset('backend/js/owl.carousel.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#owl-demo').owlCarousel({
@@ -137,137 +137,95 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                         <ul class="sidebar-menu">
                             <li class="header">MAIN NAVIGATION</li>
                             <li class="treeview">
-                                <a href="index.html">
+                                <a href="{{ url('/home') }}">
                                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                                 </a>
                             </li>
                             <li class="treeview active">
                                 <a href="#">
-                                    <i class="fa fa-laptop"></i>
-                                    <span>Components</span>
+                                    <i class="fa fa-file"></i>
+                                    <span>Danh mục phim</span>
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                                 <ul class="treeview-menu">
                                     <li>
-                                        <a href="grids.html"><i class="fa fa-angle-right"></i> Grids</a>
-                                    </li>
-                                    <li>
-                                        <a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="treeview">
-                                <a href="charts.html">
-                                    <i class="fa fa-pie-chart"></i>
-                                    <span>Charts</span>
-                                    <span class="label label-primary pull-right">new</span>
-                                </a>
-                            </li>
-                            <li class="treeview"></li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-laptop"></i>
-                                    <span>UI Elements</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li>
-                                        <a href="general.html"><i class="fa fa-angle-right"></i> General</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="typography.html"><i class="fa fa-angle-right"></i> Typography</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="widgets.html">
-                                    <i class="fa fa-th"></i> <span>Widgets</span>
-                                    <small class="label pull-right label-info">08</small>
-                                </a>
-                            </li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-edit"></i> <span>Forms</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li>
-                                        <a href="forms.html"><i class="fa fa-angle-right"></i> General Forms</a>
-                                    </li>
-                                    <li>
-                                        <a href="validation.html"><i class="fa fa-angle-right"></i> Form Validations</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-table"></i> <span>Tables</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li>
-                                        <a href="tables.html"><i class="fa fa-angle-right"></i> Simple tables</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i> <span>Mailbox </span>
-                                    <i class="fa fa-angle-left pull-right"></i><small
-                                        class="label pull-right label-info1">08</small><span
-                                        class="label label-primary1 pull-right">02</span></a>
-                                <ul class="treeview-menu">
-                                    <li>
-                                        <a href="inbox.html"><i class="fa fa-angle-right"></i> Mail Inbox
+                                        <a href="{{ route('category.create') }}">
+                                            <i class="fa fa-angle-right"></i>
+                                            Thêm
+                                            danh
+                                            mục
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="compose.html"><i class="fa fa-angle-right"></i> Compose Mail
-                                        </a>
+                                        <a href="{{ route('category.index') }}"><i class="fa fa-angle-right"></i>Liệt
+                                            kê
+                                            danh
+                                            mục</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="treeview">
                                 <a href="#">
-                                    <i class="fa fa-folder"></i> <span>Examples</span>
+                                    <i class="fa fa-child"></i>
+                                    <span>Thể loại phim</span>
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                                 <ul class="treeview-menu">
                                     <li>
-                                        <a href="login.html"><i class="fa fa-angle-right"></i> Login</a>
+                                        <a href="{{ route('genre.create') }}">
+                                            <i class="fa fa-angle-right"></i>
+                                            Thêm
+                                            thể loại
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="signup.html"><i class="fa fa-angle-right"></i> Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="404.html"><i class="fa fa-angle-right"></i> 404 Error</a>
-                                    </li>
-                                    <li>
-                                        <a href="500.html"><i class="fa fa-angle-right"></i> 500 Error</a>
-                                    </li>
-                                    <li>
-                                        <a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a>
+                                        <a href="{{ route('genre.index') }}"><i class="fa fa-angle-right"></i>Liệt
+                                            kê
+                                            thể loại</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header">LABELS</li>
-                            <li>
-                                <a href="#"><i class="fa fa-angle-right text-red"></i>
-                                    <span>Important</span></a>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-globe"></i>
+                                    <span>Quốc gia phim</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="{{ route('country.create') }}">
+                                            <i class="fa fa-angle-right"></i>
+                                            Thêm
+                                            quốc gia
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('country.index') }}"><i class="fa fa-angle-right"></i>Liệt
+                                            kê
+                                            quốc gia</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-angle-right text-yellow"></i>
-                                    <span>Warning</span></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-angle-right text-aqua"></i>
-                                    <span>Information</span></a>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-film"></i>
+                                    <span>Phim</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="{{ route('country.create') }}">
+                                            <i class="fa fa-angle-right"></i>
+                                            Thêm
+                                            phim
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('country.index') }}"><i class="fa fa-angle-right"></i>Liệt
+                                            kê
+                                            phim</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -286,8 +244,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     <!--notifications of menu start -->
                     <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">4</span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                    class="fa fa-envelope"></i><span class="badge">4</span></a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="notification_header">
@@ -588,405 +546,22 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="row-one widgettable">
-                    <div class="col-md-7 content-top-2 card">
-                        <div class="agileinfo-cdr">
-                            <div class="card-header">
-                                <h3>Weekly Sales</h3>
-                            </div>
-                            <div id="Linegraph" style="width: 98%; height: 350px"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 stat">
-                        <div class="content-top-1">
-                            <div class="col-md-6 top-content">
-                                <h5>Sales</h5>
-                                <label>1283+</label>
-                            </div>
-                            <div class="col-md-6 top-content1">
-                                <div id="demo-pie-1" class="pie-title-center" data-percent="45">
-                                    <span class="pie-value"></span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="content-top-1">
-                            <div class="col-md-6 top-content">
-                                <h5>Reviews</h5>
-                                <label>2262+</label>
-                            </div>
-                            <div class="col-md-6 top-content1">
-                                <div id="demo-pie-2" class="pie-title-center" data-percent="75">
-                                    <span class="pie-value"></span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="content-top-1">
-                            <div class="col-md-6 top-content">
-                                <h5>Visitors</h5>
-                                <label>12589+</label>
-                            </div>
-                            <div class="col-md-6 top-content1">
-                                <div id="demo-pie-3" class="pie-title-center" data-percent="90">
-                                    <span class="pie-value"></span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 stat">
-                        <div class="content-top">
-                            <div class="top-content facebook">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <ul class="info">
-                                <li class="col-md-6">
-                                    <b>1,296</b>
-                                    <p>Friends</p>
-                                </li>
-                                <li class="col-md-6">
-                                    <b>647</b>
-                                    <p>Likes</p>
-                                </li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </div>
-                        <div class="content-top">
-                            <div class="top-content twitter">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <ul class="info">
-                                <li class="col-md-6">
-                                    <b>1,997</b>
-                                    <p>Followers</p>
-                                </li>
-                                <li class="col-md-6">
-                                    <b>389</b>
-                                    <p>Tweets</p>
-                                </li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </div>
-                        <div class="content-top">
-                            <div class="top-content google-plus">
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                            </div>
-                            <ul class="info">
-                                <li class="col-md-6">
-                                    <b>1,216</b>
-                                    <p>Followers</p>
-                                </li>
-                                <li class="col-md-6">
-                                    <b>321</b>
-                                    <p>shares</p>
-                                </li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="charts">
-                    <div class="col-md-4 charts-grids widget">
-                        <div class="card-header">
-                            <h3>Bar chart</h3>
-                        </div>
-                        <div id="container" style="width: 100%; height: 270px">
-                            <canvas id="canvas"></canvas>
-                        </div>
-                        <button id="randomizeData">Randomize Data</button>
-                        <button id="addDataset">Add Dataset</button>
-                        <button id="removeDataset">Remove Dataset</button>
-                        <button id="addData">Add Data</button>
-                        <button id="removeData">Remove Data</button>
-                    </div>
-                    <div class="col-md-4 charts-grids widget states-mdl">
-                        <div class="card-header">
-                            <h3>Column & Line Graph</h3>
-                        </div>
-                        <div id="chartdiv"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+
+
                 <!-- for amcharts js -->
-                <script src="js/amcharts.js"></script>
-                <script src="js/serial.js"></script>
-                <script src="js/export.min.js"></script>
-                <link rel="stylesheet" href="css/export.css" type="text/css" media="all" />
-                <script src="js/light.js"></script>
+                <script src="{{ asset('backend/js/amcharts.js') }}"></script>
+                <script src="{{ asset('backend/js/serial.js') }}"></script>
+                <script src="{{ asset('backend/js/export.min.js') }}"></script>
+                <link rel="stylesheet" href="{{ asset('backend/css/export.css') }}" type="text/css"
+                    media="all" />
+                <script src="{{ asset('backend/js/light.js') }}"></script>
                 <!-- for amcharts js -->
-                <script src="js/index1.js"></script>
-                <div class="charts">
-                    <div class="mid-content-top charts-grids">
-                        <div class="middle-content">
-                            <h4 class="title">Carousel Slider</h4>
-                            <!-- start content_slider -->
-                            <div id="owl-demo" class="owl-carousel text-center">
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider1.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider2.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider3.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider4.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider5.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider6.jpg"
-                                        alt="name" />
-                                </div>
-                                <div class="item">
-                                    <img class="lazyOwl img-responsive" data-src="images/slider7.jpg"
-                                        alt="name" />
-                                </div>
-                            </div>
-                        </div>
-                        <!--//sreen-gallery-cursual---->
-                    </div>
+                <script src="{{ asset('backend/js/index1.js') }}"></script>
+                <div class="col-md-12" style="margin-top: 20px">
+                    @yield('content')
+                    <div class="clear-fix"></div>
                 </div>
-                <div class="col_1">
-                    <div class="col-md-4 span_8">
-                        <div class="activity_box">
-                            <h2>Inbox</h2>
-                            <div class="scrollbar" id="style-1">
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/1.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">Michael Chris</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>12:05 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/4.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">Alexander</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>12:06 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/3.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">Daniel Lucas</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>01:30 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/2.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">Jackson Jacob</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>01:50 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/1.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">David Samuel</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>12:20 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/4.jpg" class="img-responsive" alt="" />
-                                    </div>
-                                    <div class="col-xs-7 activity-desc">
-                                        <h5><a href="#">laura Smith</a></h5>
-                                        <p>Hey ! There I'm available.</p>
-                                    </div>
-                                    <div class="col-xs-2 activity-desc1">
-                                        <h6>12:50 PM</h6>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="text" value="Enter your text" onfocus="this.value = '';"
-                                    onblur="if (this.value == '') {this.value = 'Enter your text';}" required="" />
-                                <input type="submit" value="Submit" />
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-4 span_8">
-                        <div class="activity_box activity_box1">
-                            <h3>chat</h3>
-                            <div class="scrollbar" id="style-3">
-                                <div class="activity-row activity-row1">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/1.jpg" class="img-responsive" alt="" /><span>06:01
-                                            AM</span>
-                                    </div>
-                                    <div class="col-xs-5 activity-img1">
-                                        <div class="activity-desc-sub">
-                                            <h5>Michael Chris</h5>
-                                            <p>Hello ! this is Michael chris</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 activity-desc1"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row activity-row1">
-                                    <div class="col-xs-2 activity-desc1"></div>
-                                    <div class="col-xs-7 activity-img2">
-                                        <div class="activity-desc-sub1">
-                                            <h5>Alexander</h5>
-                                            <p>Hi,How are you ? What about our next meeting?</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/3.jpg" class="img-responsive" alt="" /><span>06:02
-                                            AM</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row activity-row1">
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/1.jpg" class="img-responsive" alt="" /><span>06:05
-                                            AM</span>
-                                    </div>
-                                    <div class="col-xs-5 activity-img1">
-                                        <div class="activity-desc-sub">
-                                            <h5>Michael Chris</h5>
-                                            <p>Yeah fine, Hope you the same</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 activity-desc1"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="activity-row activity-row1">
-                                    <div class="col-xs-2 activity-desc1"></div>
-                                    <div class="col-xs-7 activity-img2">
-                                        <div class="activity-desc-sub1">
-                                            <h5>Alexander</h5>
-                                            <p>Wow that's great</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3 activity-img">
-                                        <img src="images/3.jpg" class="img-responsive" alt="" /><span>06:20
-                                            PM</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="text" value="Enter your text" onfocus="this.value = '';"
-                                    onblur="if (this.value == '') {this.value = 'Enter your text';}" required="" />
-                                <input type="submit" value="Send" />
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-4 span_8">
-                        <div class="activity_box activity_box2">
-                            <h3>todo</h3>
-                            <div class="scrollbar" id="style-2">
-                                <div class="activity-row activity-row1">
-                                    <div class="single-bottom">
-                                        <ul>
-                                            <li>
-                                                <input type="checkbox" id="brand" value="" />
-                                                <label for="brand"><span></span> Integer sollicitudin lacinia
-                                                    condimentum.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand1" value="" />
-                                                <label for="brand1"><span></span> ligula sit amet hendrerit init
-                                                    lorem.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand2" value="" />
-                                                <label for="brand2"><span></span> Donec aliquam dolor eu augue
-                                                    condimentum.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand9" value="" />
-                                                <label for="brand9"><span></span> at tristique Pain that produces no
-                                                    resultant.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand8" value="" />
-                                                <label for="brand8"><span></span> Nulla finibus rhoncus turpis quis
-                                                    tristique.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand7" value="" />
-                                                <label for="brand7"><span></span> Cupidatat non proident Praising
-                                                    pain.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand3" value="" />
-                                                <label for="brand3"><span></span> libero vel elementum euismod,
-                                                    mauris
-                                                    tellus</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand4" value="" />
-                                                <label for="brand4"><span></span> Donec aliquam dolor eu augue
-                                                    condimentum.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand5" value="" />
-                                                <label for="brand5"><span></span> Orci varius natoque penatibus et
-                                                    magnis dis.</label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" id="brand6" value="" />
-                                                <label for="brand6"><span></span> parturient Dolorem ipsum
-                                                    quia.</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="text" value="Enter your text" onfocus="this.value = '';"
-                                    onblur="if (this.value == '') {this.value = 'Enter your text';}" required="" />
-                                <input type="submit" value="Submit" />
-                            </form>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+
             </div>
         </div>
         <!--footer-->
@@ -999,8 +574,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <!--//footer-->
     </div>
     <!-- new added graphs chart js-->
-    <script src="js/Chart.bundle.js"></script>
-    <script src="js/utils.js"></script>
+    <script src="{{ asset('backend/js/Chart.bundle.js') }}"></script>
+    <script src="{{ asset('backend/js/utils.js') }}"></script>
     <script>
         var MONTHS = [
             'January',
@@ -1153,7 +728,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- new added graphs chart js-->
     <!-- Classie -->
     <!-- for toggle left push menu script -->
-    <script src="js/classie.js"></script>
+    <script src="{{ asset('backend/js/classie.js') }}"></script>
     <script>
         var menuLeft = document.getElementById('cbp-spmenu-s1'),
             showLeftPush = document.getElementById('showLeftPush'),
@@ -1175,17 +750,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- //Classie -->
     <!-- //for toggle left push menu script -->
     <!--scrolling js-->
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="{{ asset('backend/js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('backend/js/scripts.js') }}"></script>
     <!--//scrolling js-->
     <!-- side nav js -->
-    <script src="js/SidebarNav.min.js" type="text/javascript"></script>
+    <script src="{{ asset('backend/js/SidebarNav.min.js') }}" type="text/javascript"></script>
     <script>
         $('.sidebar-menu').SidebarNav();
     </script>
     <!-- //side nav js -->
     <!-- for index page weekly sales java script -->
-    <script src="js/SimpleChart.js"></script>
+    <script src="{{ asset('backend/js/SimpleChart.js') }}"></script>
     <script>
         var graphdata1 = {
             linecolor: '#CCA300',
@@ -1732,8 +1307,45 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //for index page weekly sales java script -->
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.js"></script>
+    <script src="{{ asset('backend/js/bootstrap.js') }}"></script>
     <!-- //Bootstrap Core JavaScript -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tablephim').DataTable();
+        });
+
+        function ChangeToSlug() {
+
+            var slug;
+
+            //Lấy text từ thẻ input title 
+            slug = document.getElementById("slug").value;
+            slug = slug.toLowerCase();
+            //Đổi ký tự có dấu thành không dấu
+            slug = slug.replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a');
+            slug = slug.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, 'e');
+            slug = slug.replace(/i|í|ì|ỉ|ĩ|ị/gi, 'i');
+            slug = slug.replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/gi, 'o');
+            slug = slug.replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/gi, 'u');
+            slug = slug.replace(/ý|ỳ|ỷ|ỹ|ỵ/gi, 'y');
+            slug = slug.replace(/đ/gi, 'd');
+            //Xóa các ký tự đặt biệt
+            slug = slug.replace(/\`|\~|\!|\@|\#|\||\$|\%|\^|\&|\*|\(|\)|\+|\=|\,|\.|\/|\?|\>|\<|\'|\"|\:|\;|_/gi, '-');
+            //Đổi khoảng trắng thành ký tự gạch ngang
+            slug = slug.replace(/ /gi, "-");
+            //Đổi nhiều ký tự gạch ngang liên tiếp thành 1 ký tự gạch ngang
+            //Phòng trường hợp người nhập vào quá nhiều ký tự trắng
+            slug = slug.replace(/\-\-\-\-\-/gi, '-');
+            slug = slug.replace(/\-\-\-\-/gi, '-');
+            slug = slug.replace(/\-\-\-/gi, '-');
+            slug = slug.replace(/\-\-/gi, '-');
+            //Xóa các ký tự gạch ngang ở đầu và cuối
+            slug = '@' + slug + '@';
+            slug = slug.replace(/\@\-|\-\@|\@/gi, '');
+            //In slug ra textbox có id “slug”
+            document.getElementById('convert_slug').value = slug;
+        }
+    </script>
 </body>
 
 </html>

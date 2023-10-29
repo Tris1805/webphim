@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Genre;
+
 class GenreController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class GenreController extends Controller
      */
     public function index()
     {
-        //
+        $list = Genre::all();
+        return view('admincp.genre.index', compact('list'));
     }
 
     /**
@@ -23,8 +25,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        $list = Genre::all();
-        return view('admincp.genre.form', compact('list'));
+        return view('admincp.genre.form');
     }
 
     /**
@@ -66,7 +67,7 @@ class GenreController extends Controller
     {
         $genre = Genre::find($id);
         $list = Genre::all();
-        return view('admincp.genre.form', compact('list','genre'));
+        return view('admincp.genre.form', compact('list', 'genre'));
     }
 
     /**
