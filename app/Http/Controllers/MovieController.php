@@ -261,6 +261,8 @@ class MovieController extends Controller
             $get_image->move('uploads/movie/', $new_image);
             $movie->image = $new_image;
         }
+        toastr()->success('Successfully', 'Thêm thành công');
+
         $movie->save();
         //Thêm nhiều thể loại phim
         $movie->movie_genre()->attach($data['genre']);
@@ -372,7 +374,7 @@ class MovieController extends Controller
         }
         $movie->save();
         $movie->movie_genre()->sync($data['genre']);
-        toastr()->success('Successfully', 'Thêm thành công');
+        toastr()->success('Successfully', 'Sửa thành công');
         return redirect()->route('movie.index');
     }
 

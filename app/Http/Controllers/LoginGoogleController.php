@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Genre;
 
-class GenreController extends Controller
+use Illuminate\Http\Request;
+use Exception;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+
+class LoginGoogleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +18,7 @@ class GenreController extends Controller
      */
     public function index()
     {
-        $list = Genre::all();
-        return view('admincp.genre.index', compact('list'));
+        //
     }
 
     /**
@@ -25,7 +28,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        return view('admincp.genre.form');
+        //
     }
 
     /**
@@ -36,15 +39,7 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $genre = new Genre();
-        $genre->title = $data['title'];
-        $genre->slug = $data['slug'];
-        $genre->description = $data['description'];
-        $genre->status = $data['status'];
-        toastr()->success('Successfully', 'Thêm thành công');
-        $genre->save();
-        return redirect()->back();
+        //
     }
 
     /**
@@ -66,9 +61,7 @@ class GenreController extends Controller
      */
     public function edit($id)
     {
-        $genre = Genre::find($id);
-        $list = Genre::all();
-        return view('admincp.genre.form', compact('list', 'genre'));
+        //
     }
 
     /**
@@ -80,15 +73,7 @@ class GenreController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        $genre = Genre::find($id);
-        $genre->title = $data['title'];
-        $genre->slug = $data['slug'];
-        $genre->description = $data['description'];
-        $genre->status = $data['status'];
-        toastr()->success('Successfully', 'Sửa thành công');
-        $genre->save();
-        return redirect()->back();
+        //
     }
 
     /**
@@ -99,7 +84,44 @@ class GenreController extends Controller
      */
     public function destroy($id)
     {
-        Genre::find($id)->delete();
+        //
+    }
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+    public function handleGoogleCallback()
+    {
+        try {
+
+            $user = Socialite::driver('google')->user();
+
+            $finduser = User::where('google_id', $user->google_id)->first();
+
+            if ($finduser) {
+
+                Auth::login($finduser);
+
+                return redirect()->intended('/');
+            } else {
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'google_id' => $user->id,
+                    'password' => encrypt('123456789')
+                ]);
+
+                Auth::login($newUser);
+
+                return redirect()->intended('/');
+            }
+        } catch (Exception $e) {
+            dd($e->getMessage());
+        }
+    }
+    public function logout_home()
+    {
+        Auth::logout();
         return redirect()->back();
     }
 }

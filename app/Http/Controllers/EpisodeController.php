@@ -54,7 +54,7 @@ class EpisodeController extends Controller
             $ep->episode = $data['episode'];
             $ep->created_at = Carbon::now('Asia/Ho_Chi_Minh');
             $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
-
+            toastr()->success('Successfully', 'Thêm thành công');
             $ep->save();
             return redirect()->back();
         }
@@ -102,6 +102,7 @@ class EpisodeController extends Controller
         $ep->episode = $data['episode'];
         $ep->created_at = Carbon::now('Asia/Ho_Chi_Minh');
         $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
+        toastr()->success('Successfully', 'Sủa thành công');
 
         $ep->save();
         return redirect()->to('episode');

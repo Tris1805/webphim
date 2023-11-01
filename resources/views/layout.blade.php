@@ -108,13 +108,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hidden-xs">
+                {{-- <div class="col-md-4 hidden-xs">
                     <div id="get-bookmark" class="box-shadow"><i class="hl-bookmark"></i><span> Bookmarks</span><span
                             class="count">0</span></div>
                     <div id="bookmark-list" class="hidden bookmark-list-on-pc">
                         <ul style="margin: 0;"></ul>
                     </div>
+                </div> --}}
+                <div class="col-md-4 hidden-xs">
+                    @if (Auth::check())
+                        <span>Tài khoản {{ Auth::user()->name }}</span>
+                        <a href="{{ route('logout-home') }}">Đăng xuất</a>
+                    @else
+                        <a href="{{ route('login-by-google') }}">Đăng nhập <i class="fab fa-google-plus-g"></i></a>
+                    @endif
                 </div>
+
             </div>
         </div>
     </header>

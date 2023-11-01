@@ -11,6 +11,9 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\Auth\LogoutController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -69,3 +72,11 @@ Route::post('add-rating', [IndexController::class, 'add_rating'])->name('add-rat
 Route::get('/create_sitemap', function () {
     return Artisan::call('sitemap:create');
 });
+
+
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+//Google Login Route
+Route::get('auth/google', [\App\Http\Controllers\LoginGoogleController::class, 'redirectToGoogle'])->name('login-by-google');
+Route::get('auth/google/callback', [\App\Http\Controllers\LoginGoogleController::class, 'handleGoogleCallback']);
+Route::get('logout-home', [\App\Http\Controllers\LoginGoogleController::class, 'logout_home'])->name('logout-home');
